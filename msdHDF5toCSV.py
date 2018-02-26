@@ -179,7 +179,7 @@ def main():
         #Default is to list all available attributes (in alphabetical order)
         csvRowString = ("SongID,AlbumID,AlbumName,ArtistID,ArtistLatitude,ArtistLocation,"+
             "ArtistLongitude,ArtistFamiliarity,ArtistHotttness,ArtistName,"+
-            "ArtistMBTags,ArtistMBTagsCount,ArtistTerms",+
+            "ArtistMBTags,ArtistMBTagsCount,ArtistTerms,"+
             "Danceability,Energy,Duration,KeySignature,"+
             "KeySignatureConfidence,Loudness,Mode,Hotttness,Tempo,TimeSignature,TimeSignatureConfidence,"+
             "Title,Year")
