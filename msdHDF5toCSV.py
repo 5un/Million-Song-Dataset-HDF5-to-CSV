@@ -221,7 +221,7 @@ def main():
             song.artistLocation = str(hdf5_getters.get_artist_location(songH5File))
             song.artistLongitude = str(hdf5_getters.get_artist_longitude(songH5File))
             song.artistFamiliarity = str(hdf5_getters.get_artist_familiarity(songH5File))
-            song.artistHotttness = str(df5_getters.get_artist_hotttnesss(songH5File))
+            song.artistHotttness = str(hdf5_getters.get_artist_hotttnesss(songH5File))
             song.artistName = str(hdf5_getters.get_artist_name(songH5File))
             song.artistMBTags = ','.join(str(hdf5_getters.get_artist_mbtags(songH5File)))
             song.artistMBTagsCount = str(hdf5_getters.get_artist_mbtags_count(songH5File))
