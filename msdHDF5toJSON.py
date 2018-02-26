@@ -170,7 +170,7 @@ def main():
             lastIndex = len(csvRowString)
             csvRowString = csvRowString[0:lastIndex-1]
             csvRowString += "\n"
-            outputFile1.write(csvRowString);
+            # outputFile1.write(csvRowString);
             csvRowString = ""
     #else, if you want to hard code the order of the csv file and not prompt
     #the user, 
@@ -189,8 +189,8 @@ def main():
         csvAttributeList = re.split('\W+', csvRowString)
         for i, v in enumerate(csvAttributeList):
             csvAttributeList[i] = csvAttributeList[i].lower()
-        outputFile1.write("SongNumber,");
-        outputFile1.write(csvRowString + "\n");
+        # outputFile1.write("SongNumber,");
+        # outputFile1.write(csvRowString + "\n");
         csvRowString = ""  
 
     #################################################
