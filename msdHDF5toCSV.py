@@ -303,7 +303,7 @@ def main():
                 elif attribute == 'Tempo'.lower():
                     # print "Tempo: " + song.tempo
                     csvRowString += song.tempo
-                elif attribute == 'Hotnesss'.lower():
+                elif attribute == 'Hotttnesss'.lower():
                     csvRowString += song.hotnesss
                 elif attribute == 'TimeSignature'.lower():
                     csvRowString += song.timeSignature
