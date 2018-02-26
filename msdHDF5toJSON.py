@@ -268,6 +268,7 @@ def main():
                 'Mode': song.mode,
                 'Hotttnesss': song.hotttnesss,
                 'Tempo': song.tempo,
+                'SongID': song.id,
                 'TimeSignature': song.timeSignature,
                 'TimeSignatureConfidence': song.timeSignatureConfidence,
                 'Title': song.title,
