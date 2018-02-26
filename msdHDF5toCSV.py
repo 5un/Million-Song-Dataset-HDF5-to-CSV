@@ -198,7 +198,7 @@ def main():
     #Set the basedir here, the root directory from which the search
     #for files stored in a (hierarchical data structure) will originate
     basedir = sys.argv[1] # "." As the default means the current directory
-    ext = ".H5" #Set the extension here. H5 is the extension for HDF5 files.
+    ext = ".h5" #Set the extension here. H5 is the extension for HDF5 files.
     #################################################
 
     #FOR LOOP
