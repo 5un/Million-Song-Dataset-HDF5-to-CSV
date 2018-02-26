@@ -224,7 +224,7 @@ def main():
             song.artistHotttnesss = str(hdf5_getters.get_artist_hotttnesss(songH5File))
             song.artistName = str(hdf5_getters.get_artist_name(songH5File))
             song.artistMBTags = ','.join(hdf5_getters.get_artist_mbtags(songH5File))
-            song.artistMBTagsCount = str(hdf5_getters.get_artist_mbtags_count(songH5File))
+            song.artistMBTagsCount = ','.join(hdf5_getters.get_artist_mbtags_count(songH5File))
             song.artistTerms = ','.join(hdf5_getters.get_artist_terms(songH5File))
             song.danceability = str(hdf5_getters.get_danceability(songH5File))
             song.energy = str(hdf5_getters.get_energy(songH5File))
@@ -280,9 +280,9 @@ def main():
                 elif attribute == 'ArtistMBTags'.lower():
                     csvRowString += "\"" + song.artistMBTags + "\""     
                 elif attribute == 'ArtistMBTagsCount'.lower():
-                    csvRowString += song.artistMBTagsCount 
+                    csvRowString += "\"" + song.artistMBTagsCount + "\""
                 elif attribute == 'ArtistTerms'.lower():
-                    csvRowString += song.artistTerms                   
+                    csvRowString += "\"" + song.artistTerms + "\""                 
                 elif attribute == 'Danceability'.lower():
                     csvRowString += song.danceability
                 elif attribute == 'Energy'.lower():
