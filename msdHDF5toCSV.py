@@ -232,7 +232,7 @@ def main():
                     csvRowString += song.albumID
                 elif attribute == 'AlbumName'.lower():
                     albumName = song.albumName
-                    albumName = albumName.replace(',',"")
+                    albumName = albumName.replace(',',"").replace('"', '""')
                     csvRowString += "\"" + albumName + "\""
                 elif attribute == 'ArtistID'.lower():
                     csvRowString += "\"" + song.artistID + "\""
@@ -243,7 +243,7 @@ def main():
                     csvRowString += latitude
                 elif attribute == 'ArtistLocation'.lower():
                     location = song.artistLocation
-                    location = location.replace(',','')
+                    location = location.replace(',','').replace('"', '""')
                     csvRowString += "\"" + location + "\""
                 elif attribute == 'ArtistLongitude'.lower():
                     longitude = song.artistLongitude
@@ -251,7 +251,7 @@ def main():
                         longitude = ''
                     csvRowString += longitude                
                 elif attribute == 'ArtistName'.lower():
-                    csvRowString += "\"" + song.artistName + "\""                
+                    csvRowString += "\"" + song.artistName.replace('"', '""') + "\""                
                 elif attribute == 'Danceability'.lower():
                     csvRowString += song.danceability
                 elif attribute == 'Duration'.lower():
@@ -272,7 +272,7 @@ def main():
                     # print "time sig conf: " + song.timeSignatureConfidence                                   
                     csvRowString += song.timeSignatureConfidence
                 elif attribute == 'Title'.lower():
-                    csvRowString += "\"" + song.title + "\""
+                    csvRowString += "\"" + song.title.replace('"', '""') + "\""
                 elif attribute == 'Year'.lower():
                     csvRowString += song.year
                 else:
