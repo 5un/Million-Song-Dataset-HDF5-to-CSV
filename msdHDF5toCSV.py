@@ -304,7 +304,7 @@ def main():
                     # print "Tempo: " + song.tempo
                     csvRowString += song.tempo
                 elif attribute == 'Hotttnesss'.lower():
-                    csvRowString += song.hotnesss
+                    csvRowString += song.hotttnesss
                 elif attribute == 'TimeSignature'.lower():
                     csvRowString += song.timeSignature
                 elif attribute == 'TimeSignatureConfidence'.lower():
