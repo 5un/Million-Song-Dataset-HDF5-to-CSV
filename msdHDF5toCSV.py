@@ -59,7 +59,7 @@ class Song:
         self.artistLocation = None
         self.artistLongitude = None
         self.artistFamiliarity = None
-        self.artistHotttness = None
+        self.artistHotttnesss = None
         self.artistName = None
         self.artistMBTags = None
         self.artistMBTagsCount = None
@@ -74,7 +74,7 @@ class Song:
         self.mode = None
         self.lyrics = None
         self.popularity = None
-        self.hotttness = None
+        self.hotttnesss = None
         self.tempo = None
         self.timeSignature = None
         self.timeSignatureConfidence = None
@@ -178,10 +178,10 @@ def main():
         #change the order of the csv file here
         #Default is to list all available attributes (in alphabetical order)
         csvRowString = ("SongID,AlbumID,AlbumName,ArtistID,ArtistLatitude,ArtistLocation,"+
-            "ArtistLongitude,ArtistFamiliarity,ArtistHotttness,ArtistName,"+
+            "ArtistLongitude,ArtistFamiliarity,ArtistHotttnesss,ArtistName,"+
             "ArtistMBTags,ArtistMBTagsCount,ArtistTerms,"+
             "Danceability,Energy,Duration,KeySignature,"+
-            "KeySignatureConfidence,Loudness,Mode,Hotttness,Tempo,TimeSignature,TimeSignatureConfidence,"+
+            "KeySignatureConfidence,Loudness,Mode,Hotttnesss,Tempo,TimeSignature,TimeSignatureConfidence,"+
             "Title,Year")
         #################################################
 
@@ -221,7 +221,7 @@ def main():
             song.artistLocation = str(hdf5_getters.get_artist_location(songH5File))
             song.artistLongitude = str(hdf5_getters.get_artist_longitude(songH5File))
             song.artistFamiliarity = str(hdf5_getters.get_artist_familiarity(songH5File))
-            song.artistHotttness = str(hdf5_getters.get_artist_hotttnesss(songH5File))
+            song.artistHotttnesss = str(hdf5_getters.get_artist_hotttnesss(songH5File))
             song.artistName = str(hdf5_getters.get_artist_name(songH5File))
             song.artistMBTags = ','.join(str(hdf5_getters.get_artist_mbtags(songH5File)))
             song.artistMBTagsCount = str(hdf5_getters.get_artist_mbtags_count(songH5File))
@@ -236,7 +236,7 @@ def main():
             song.mode = str(hdf5_getters.get_mode(songH5File))
             # song.lyrics = None
             # song.popularity = None
-            song.hotttness = str(hdf5_getters.get_song_hotttness(songH5File))
+            song.hotttnesss = str(hdf5_getters.get_song_hotttnesss(songH5File))
             song.tempo = str(hdf5_getters.get_tempo(songH5File))
             song.timeSignature = str(hdf5_getters.get_time_signature(songH5File))
             song.timeSignatureConfidence = str(hdf5_getters.get_time_signature_confidence(songH5File))
@@ -273,8 +273,8 @@ def main():
                     csvRowString += longitude     
                 elif attribute == 'ArtistFamiliarity'.lower():
                     csvRowString += song.artistFamiliarity 
-                elif attribute == 'ArtistHotttness'.lower():
-                    csvRowString += song.artistHotttness          
+                elif attribute == 'ArtistHotttnesss'.lower():
+                    csvRowString += song.artistHotttnesss          
                 elif attribute == 'ArtistName'.lower():
                     csvRowString += "\"" + song.artistName.replace('"', '""') + "\""  
                 elif attribute == 'ArtistMBTags'.lower():
@@ -303,8 +303,8 @@ def main():
                 elif attribute == 'Tempo'.lower():
                     # print "Tempo: " + song.tempo
                     csvRowString += song.tempo
-                elif attribute == 'Hotness'.lower():
-                    csvRowString += song.hotness
+                elif attribute == 'Hotnesss'.lower():
+                    csvRowString += song.hotnesss
                 elif attribute == 'TimeSignature'.lower():
                     csvRowString += song.timeSignature
                 elif attribute == 'TimeSignatureConfidence'.lower():
